@@ -1,0 +1,31 @@
+{
+    "namespace": "Biometric",
+
+    "bridge_functions": [
+        {
+            "name": "Biometric.Available",
+            "android": "com.blutrixx.plugins.biometric.BiometricFunctions.Available",
+            "android_params": ["activity"],
+            "description": "Whether this phone has a fingerprint (or face) enrolled that an app may use: {} → { available }"
+        },
+        {
+            "name": "Biometric.Authenticate",
+            "android": "com.blutrixx.plugins.biometric.BiometricFunctions.Authenticate",
+            "android_params": ["activity"],
+            "description": "Shows Android's biometric prompt and waits for it: { title, subtitle, cancel } → { success, cancelled?, error? }"
+        }
+    ],
+
+    "android": {
+        "min_version": 26,
+        "dependencies": {
+            "implementation": [
+                "androidx.biometric:biometric:1.1.0"
+            ]
+        }
+    },
+
+    "ios": {
+        "min_version": "18.0"
+    }
+}

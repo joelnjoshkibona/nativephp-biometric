@@ -1,0 +1,25 @@
+{
+    "name": "blutrixx/nativephp-biometric",
+    "description": "NativePHP Mobile plugin: the phone's own fingerprint or face (Android BiometricPrompt), e.g. to unlock an app. Biometric.Available and Biometric.Authenticate.",
+    "type": "nativephp-plugin",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Blutrixx\\Biometric\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Blutrixx\\Biometric\\BiometricServiceProvider"
+            ]
+        },
+        "nativephp": {
+            "manifest": "nativephp.json"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "nativephp/mobile": "^4.0"
+    }
+}
